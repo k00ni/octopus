@@ -1,0 +1,15 @@
+{
+    "name": "w3c/skos-core",
+    "version": {
+        "*": {
+            "require": {
+                "dublincore/terms": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*"
+            },
+            "file": "http://www.w3.org/TR/skos-reference/skos.rdf",
+            "prefix-uri": "http://www.w3.org/2004/02/skos/core#"
+        }
+    }
+}

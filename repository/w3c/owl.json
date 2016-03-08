@@ -1,0 +1,16 @@
+{
+    "name": "w3c/owl",
+    "version": {
+        "*": {
+            "require": {
+                "dublincore/elements": "*",
+                "dublincore/grddl": "*",
+                "w3c/rdf": "*",
+                "w3c/xml": "*",
+                "w3c/xsd": "1.1"
+            },
+            "file": "https://www.w3.org/2002/07/owl#",
+            "prefix-uri": "http://www.w3.org/2002/07/owl#"
+        }
+    }
+}

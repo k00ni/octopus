@@ -1,0 +1,13 @@
+{
+    "name": "w3c/hpf",
+    "version": {
+        "*": {
+            "require": {
+                "w3c/xhtml": "*",
+                "w3c/xsi": "*"
+            },
+            "file": "https://www.w3.org/2001/XMLSchema-hasFacetAndProperty",
+            "prefix-uri": "http://www.w3.org/2001/XMLSchema-hasFacetAndProperty"
+        }
+    }
+}

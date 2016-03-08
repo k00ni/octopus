@@ -1,0 +1,12 @@
+{
+    "name": "dublincore/grddl",
+    "title": "Gleaning Resource Descriptions from Dialects of Languages",
+    "version": {
+        "*": {
+            "require": {
+            },
+            "file": "",
+            "prefix-uri": "http://www.w3.org/2003/g/data-view#"
+        }
+    }
+}

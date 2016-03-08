@@ -1,0 +1,10 @@
+/composer.lock
+/vendor/aksw
+/vendor/bin
+/vendor/doctrine
+/vendor/phpdocumentor
+/vendor/phpspec
+/vendor/phpunit
+/vendor/sebastian
+/vendor/symfony/yaml
+/vendor/zendframework

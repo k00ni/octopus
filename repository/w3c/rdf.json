@@ -1,0 +1,14 @@
+{
+    "name": "w3c/rdf",
+    "version": {
+        "*": {
+            "require": {
+                "dublincore/elements": "*",
+                "w3c/owl": "*",
+                "w3c/rdfs": "*"
+            },
+            "file": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "prefix-uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        }
+    }
+}

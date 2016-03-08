@@ -1,0 +1,17 @@
+{
+    "name": "dublincore/am",
+    "title": "Metadata terms related to the DCMI Abstract Model",
+    "version": {
+        "*": {
+            "require": {
+                "dublincore/terms": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/skos-core": "*"
+            },
+            "file": "https://raw.githubusercontent.com/dublincore/website/master/build/dcam.ttl",
+            "prefix-uri": "http://purl.org/dc/dcam/"
+        }
+    }
+}

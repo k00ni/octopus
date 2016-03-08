@@ -1,0 +1,16 @@
+{
+    "name": "w3c/xsd",
+    "version": {
+        "1.1": {
+            "file": "https://www.w3.org/2009/XMLSchema/XMLSchema.xsd",
+            "prefix-uri": "http://www.w3.org/2001/XMLSchema"
+        },
+        "1.0": {
+            "require": {
+                "w3c/hpf": "*"
+            },
+            "file": "https://www.w3.org/2001/XMLSchema.xsd",
+            "prefix-uri": "http://www.w3.org/2001/XMLSchema"
+        }
+    }
+}

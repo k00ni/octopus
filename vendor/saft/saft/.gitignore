@@ -1,0 +1,16 @@
+test-config.yml
+/gen
+/tmp
+
+# composer specific
+composer.lock
+composer.phar
+/vendor
+
+# PHPstorm specific
+.idea
+
+# Eclipse specific
+.project
+.settings
+.buildpath

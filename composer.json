@@ -1,0 +1,19 @@
+{
+    "name": "k00ni/octopus",
+    "require": {
+        "naucon/file": "*",
+        "php-curl-class/php-curl-class": "*",
+        "symfony/console": "*",
+        "saft/saft": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Octopus\\": ["src/Octopus", "tests/Octopus"]
+        }
+    }
+}

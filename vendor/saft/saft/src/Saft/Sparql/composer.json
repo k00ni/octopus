@@ -1,0 +1,34 @@
+{
+    "name": "saft/saft-sparql",
+    "type": "library",
+    "description": "Sparql package for Saft.",
+    "keywords": ["Saft", "Linked Data", "Semantic Web", "Sparql", "Query"],
+    "homepage": "https://safting.github.com/",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Natanael Arndt",
+            "homepage": "http://aksw.org/NatanaelArndt",
+            "email": "arndtn@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Konrad Abicht",
+            "homepage": "http://www.inspirito.de",
+            "email": "hi@inspirito.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "saft/saft-rdf": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Saft\\Sparql\\": "."
+        }
+    }
+}

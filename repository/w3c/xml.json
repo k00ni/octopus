@@ -1,0 +1,11 @@
+{
+    "name": "w3c/xml",
+    "version": {
+        "*": {
+            "require": {
+            },
+            "file": "",
+            "prefix-uri": "http://www.w3.org/TR/xml/"
+        }
+    }
+}

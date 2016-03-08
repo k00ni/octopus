@@ -1,0 +1,11 @@
+{
+    "name": "w3c/xhtml",
+    "version": {
+        "*": {
+            "require": {
+            },
+            "file": "",
+            "prefix-uri": "http://www.w3.org/1999/xhtml"
+        }
+    }
+}
