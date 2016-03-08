@@ -9,7 +9,7 @@ class ConfigurationHandlerTests extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->fixture = new ConfigurationHandler();
+        $this->fixture = new ConfigurationHandler(__DIR__ .'/../../../repository');
         $this->testConfigurationFilepath = sys_get_temp_dir() . '/testconfigurationfile.json';
     }
 
