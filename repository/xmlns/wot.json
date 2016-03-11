@@ -1,0 +1,16 @@
+{
+    "name": "xmlns/wot",
+    "version": {
+        "0.1": {
+            "require": {
+                "dublin-core/elements": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/vs": "*"
+            },
+            "file": "http://xmlns.com/wot/0.1/index.rdf",
+            "prefix-uri": "http://xmlns.com/wot/0.1/"
+        }
+    }
+}

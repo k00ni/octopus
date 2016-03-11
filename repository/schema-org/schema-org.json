@@ -1,0 +1,32 @@
+{
+    "name": "schema-org/schema-org",
+    "version": {
+        "2.2": {
+            "require": {
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*"
+            },
+            "file": "https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-deimos/data/releases/2.2/schema.nt",
+            "prefix-uri": "http://schema.org/"
+        },
+        "2.1": {
+            "require": {
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*"
+            },
+            "file": "https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-deimos/data/releases/2.1/schema.nt",
+            "prefix-uri": "http://schema.org/"
+        },
+        "2.0": {
+            "require": {
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*"
+            },
+            "file": "https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-deimos/data/releases/2.0/schema.nt",
+            "prefix-uri": "http://schema.org/"
+        }
+    }
+}

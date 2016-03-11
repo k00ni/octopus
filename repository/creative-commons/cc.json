@@ -1,0 +1,14 @@
+{
+    "name": "creative-commons/cc",
+    "version": {
+        "*": {
+            "require": {
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*"
+            },
+            "file": "https://creative-commons.org/schema.rdf",
+            "prefix-uri": "http://creative-commons.org/ns#"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "w3c/wdrs",
+    "title": "Protocol for Web Description Resources (POWDER): POWDER-S Vocabulary (WDRS)",
+    "version": {
+        "*": {
+            "require": {
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/xsd": "*"
+            },
+            "file": "http://www.w3.org/2007/05/powder-s.rdf",
+            "prefix-uri": "http://www.w3.org/2007/05/powder-s#"
+        }
+    }
+}

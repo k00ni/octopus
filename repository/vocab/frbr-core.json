@@ -1,0 +1,19 @@
+{
+    "name": "vocab/frbr-core",
+    "version": {
+        "*": {
+            "require": {
+                "creative-commons/cc": "*",
+                "dublin-core/elements": "1.1",
+                "dublin-core/terms": "*",
+                "purl/vann": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/skos-core": "*"
+            },
+            "file": "http://vocab.org/frbr/core.rdf",
+            "prefix-uri": "http://purl.org/vocab/frbr/core#"
+        }
+    }
+}

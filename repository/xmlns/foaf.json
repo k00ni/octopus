@@ -1,0 +1,18 @@
+{
+    "name": "xmlns/foaf",
+    "version": {
+        "0.99": {
+            "require": {
+                "dublin-core/elements": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/vs": "*",
+                "xmlns/foaf": "*",
+                "xmlns/wot": "*"
+            },
+            "file": "http://xmlns.com/foaf/spec/20140114.rdf",
+            "prefix-uri": "http://xmlns.com/foaf/0.1/"
+        }
+    }
+}

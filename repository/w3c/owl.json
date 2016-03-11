@@ -3,8 +3,8 @@
     "version": {
         "*": {
             "require": {
-                "dublincore/elements": "*",
-                "dublincore/grddl": "*",
+                "dublin-core/elements": "*",
+                "dublin-core/grddl": "*",
                 "w3c/rdf": "*",
                 "w3c/xml": "*",
                 "w3c/xsd": "1.1"

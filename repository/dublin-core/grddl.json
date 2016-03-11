@@ -1,5 +1,5 @@
 {
-    "name": "dublincore/grddl",
+    "name": "dublin-core/grddl",
     "title": "Gleaning Resource Descriptions from Dialects of Languages",
     "version": {
         "*": {

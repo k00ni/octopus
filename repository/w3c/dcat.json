@@ -1,0 +1,22 @@
+{
+    "name": "w3c/dcat",
+    "title": "The data catalog vocabulary",
+    "version": {
+        "*": {
+            "require": {
+                "dublin-core/elements": "*",
+                "dublin-core/terms": "*",
+                "okfn/voaf": "*",
+                "purl/vann": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/skos-core": "*",
+                "w3c/xsd": "*",
+                "xmlns/foaf": "*"
+            },
+            "file": "https://www.w3.org/ns/dcat.ttl",
+            "prefix-uri": "http://www.w3.org/ns/dcat#"
+        }
+    }
+}

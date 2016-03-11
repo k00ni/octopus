@@ -1,16 +1,16 @@
 {
-    "name": "dublincore/terms",
+    "name": "dublin-core/terms",
     "title": "DCMI Metadata Terms - other",
     "version": {
         "*": {
             "require": {
-                "dublincore/am": "*",
+                "dublin-core/am": "*",
                 "w3c/owl": "*",
                 "w3c/rdf": "*",
                 "w3c/rdfs": "*",
                 "w3c/skos-core": "*"
             },
-            "file": "https://raw.githubusercontent.com/dublincore/website/master/build/dcterms.ttl",
+            "file": "https://raw.githubusercontent.com/dublin-core/website/master/build/dcterms.ttl",
             "prefix-uri": "http://purl.org/dc/terms/"
         }
     }

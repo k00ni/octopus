@@ -1,0 +1,21 @@
+{
+    "name": "deri-vocabularies/cmm",
+    "title": "Capability Meta Model",
+    "version": {
+        "*": {
+            "require": {
+                "dublin-core/elements": "1.1",
+                "dublin-core/terms": "*",
+                "purl/vann": "*",
+                "w3c/adms": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/xsd": "*",
+                "xmlns/foaf": "*"
+            },
+            "file": "http://vocab.deri.ie/cmm.ttl",
+            "prefix-uri": "http://vocab.deri.ie/cmm#"
+        }
+    }
+}

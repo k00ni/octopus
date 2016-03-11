@@ -1,0 +1,37 @@
+{
+    "name": "okfn/voaf",
+    "title": "Vocabulary of a Friend",
+    "version": {
+        "2.3": {
+            "require": {
+                "creativecommons/cc": "*",
+                "dublin-core/terms": "*",
+                "purl/vann": "*",
+                "spinrdf/spin": "*",
+                "spinrdf/sp": "*",
+                "vocab/frbr-core": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/vs": "*",
+                "xmlns/foaf": "*"
+            },
+            "file": "http://lov.okfn.org/vocommons/voaf/v2.3/voaf_v2.3.rdf",
+            "prefix-uri": "http://labs.mondeca.com/vocab/voaf#"
+        },
+        "1.1": {
+            "require": {
+                "creativecommons/cc": "*",
+                "dublin-core/terms": "*",
+                "foaf/foaf": "*",
+                "purl/vann": "*",
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/vs": "*",
+            },
+            "file": "http://lov.okfn.org/vocommons/voaf/v1.1/voaf_v1.1.rdf",
+            "prefix-uri": "http://labs.mondeca.com/vocab/voaf#"
+        }
+    }
+}

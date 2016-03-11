@@ -1,0 +1,18 @@
+{
+    "name": "purl/vann",
+    "title": "VANN: A vocabulary for annotating vocabulary descriptions",
+    "version": {
+        "*": {
+            "require": {
+                "creative-commons/cc": "*",
+                "dublin-core/elements": "*",
+                "dublin-core/terms": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "xmlns/foaf": "*"
+            },
+            "file": "https://raw.githubusercontent.com/ssssam/charango/master/data/ontologies/vann.rdf",
+            "prefix-uri": "http://purl.org/vocab/vann/"
+        }
+    }
+}

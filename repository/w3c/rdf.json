@@ -3,7 +3,7 @@
     "version": {
         "*": {
             "require": {
-                "dublincore/elements": "*",
+                "dublin-core/elements": "*",
                 "w3c/owl": "*",
                 "w3c/rdfs": "*"
             },

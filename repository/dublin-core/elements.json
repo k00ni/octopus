@@ -1,17 +1,17 @@
 {
-    "name": "dublincore/elements",
+    "name": "dublin-core/elements",
     "title": "Dublin Core Metadata Element Set, Version 1.1",
     "version": {
         "1.1": {
             "require": {
-                "dublincore/am": "*",
-                "dublincore/terms": "*",
+                "dublin-core/am": "*",
+                "dublin-core/terms": "*",
                 "w3c/owl": "*",
                 "w3c/rdf": "*",
                 "w3c/rdfs": "*",
                 "w3c/skos-core": "*"
             },
-            "file": "https://raw.githubusercontent.com/dublincore/website/master/build/dcelements.ttl",
+            "file": "https://raw.githubusercontent.com/dublin-core/website/master/build/dcelements.ttl",
             "prefix-uri": "http://purl.org/dc/elements/1.1/"
         }
     }

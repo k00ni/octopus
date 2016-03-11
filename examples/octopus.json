@@ -4,7 +4,7 @@
     "version": {
         "*": {
             "require": {
-                "dublincore/terms": "*",
+                "dublin-core/terms": "*",
                 "w3c/skos-core": "*",
                 "w3c/rdfs": "*"
             }

@@ -1,0 +1,27 @@
+{
+    "name": "w3c/adms",
+    "title": "Asset Description Metadata Schema (ADMS)",
+    "version": {
+        "*": {
+            "require": {
+                "dublin-core/terms": "*",
+                "okfn/voaf": "*",
+                "purl/vann": "*",
+                "schema-org/schema-org": "*",
+                "w3c/dcat": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/owl": "*",
+                "w3c/skos-core": "*",
+                "w3c/vcard": "*",
+                "w3c/wdrs": "*",
+                "w3c/xhtml": "*",
+                "w3c/xml": "*",
+                "w3c/xsd": "*",
+                "xmlns/foaf": "*",
+            },
+            "file": "http://www.w3.org/ns/adms.rdf",
+            "prefix-uri": "http://www.w3.org/ns/adms#"
+        }
+    }
+}

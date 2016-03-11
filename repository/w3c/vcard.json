@@ -1,0 +1,17 @@
+{
+    "name": "w3c/vcard",
+    "title": "Ontology for vCard",
+    "version": {
+        "*": {
+            "require": {
+                "w3c/owl": "*",
+                "w3c/rdf": "*",
+                "w3c/rdfs": "*",
+                "w3c/xml": "*",
+                "w3c/xsd": "*"
+            },
+            "file": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+            "prefix-uri": "https://www.w3.org/2006/vcard/ns#"
+        }
+    }
+}
