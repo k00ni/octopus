@@ -13,6 +13,15 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class Update extends Command
 {
+    protected $currentDir;
+
+    public function __construct($currentDir)
+    {
+        parent::__construct();
+
+        $this->currentDir = $currentDir;
+    }
+
     protected function configure()
     {
         $this->setName('update')
@@ -34,7 +43,7 @@ class Update extends Command
             $configurationFilepath = './octopus.json';
         }
 
-        $configurationHandler = new ConfigurationHandler(__DIR__  . '/../../../');
+        $configurationHandler = new ConfigurationHandler($this->currentDir);
         $configurationHandler->setup(
             $configurationFilepath,
             new File(__DIR__ .'/../../../repository')

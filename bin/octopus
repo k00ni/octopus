@@ -9,10 +9,7 @@ $autoloadFiles = array(
 
 foreach ($autoloadFiles as $file) {
     if (file_exists($file)) {
-        define('PHPUNIT_COMPOSER_INSTALL', $file);
-        echo $file;
         require_once $file;
-        unset($file);
         break;
     }
 }
@@ -21,5 +18,5 @@ use Octopus\Command\Update;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
-$application->add(new Update());
+$application->add(new Update(getcwd() . DIRECTORY_SEPARATOR));
 $application->run();
