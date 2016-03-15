@@ -129,7 +129,7 @@ class ConfigurationHandler
                     . $this->configuration['knowledge-directory']
                     . '/';
             } else {
-                $folderForRequirements = $this->defaultRootFolder . '/knowledge-directory/';
+                $folderForRequirements = $this->defaultRootFolder . '/knowledge/';
             }
 
             // if there are requirements to install, create knowledge directory first
