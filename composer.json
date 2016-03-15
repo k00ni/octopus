@@ -11,6 +11,7 @@
     },
     "prefer-stable": true,
     "minimum-stability": "dev",
+    "bin": ["bin/octopus"],
     "autoload": {
         "psr-4": {
             "Octopus\\": ["src/Octopus", "tests/Octopus"]
