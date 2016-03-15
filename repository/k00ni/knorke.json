@@ -1,0 +1,14 @@
+{
+    "name": "k00ni/knorke",
+    "version": {
+        "*": {
+            "require": {
+                "w3c/owl": "*",
+                "w3c/rdfs": "*",
+                "w3c/xsd": "*"
+            },
+            "file": "https://github.com/k00ni/knorke/raw/master/knowledge/knorke.ttl",
+            "prefix-uri": "http://inspirito.de/ontology/knorke/ns#"
+        }
+    }
+}

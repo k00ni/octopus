@@ -1,0 +1,16 @@
+{
+    "name": "bvl/place",
+    "title": "Place-Ontology with information about the degree of accessibility",
+    "version": {
+        "*": {
+            "require": {
+                "k00ni/knorke": "*",
+                "w3c/owl": "*",
+                "w3c/rdfs": "*",
+                "w3c/xsd": "*"
+            },
+            "file": "https://github.com/k00ni/bvl-ontologies/raw/master/place-ontology.ttl",
+            "prefix-uri": "http://le-online.de/ontology/place/ns#"
+        }
+    }
+}
