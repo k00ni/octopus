@@ -139,6 +139,10 @@ class ConfigurationHandler
             }
 
             $nodeUtils = new NodeUtils();
+            $curl = new Curl();
+            $curl->setOpt(CURLOPT_ENCODING , 'gzip');
+            $curl->setOpt(CURLOPT_FOLLOWLOCATION, true);
+
             foreach ($requirements as $name => $requirement) {
                 // if a valid local file or URL was given
                 if (file_exists($requirement['file'])) {
@@ -147,31 +151,34 @@ class ConfigurationHandler
 
                 // if a valid URL was given
                 } elseif ($nodeUtils->simpleCheckURI($requirement['file'])) {
-                    // remove all maybe existing files
-                    if (file_exists($folderForRequirements . $name . '.ttl')) {
-                        $fileObject = new File($folderForRequirements . $vendor . '/' . $project . '.ttl');
-                        $fileObject->delete();
-                    }
-
-                    $curl = new Curl();
-                    $curl->setOpt(CURLOPT_ENCODING , 'gzip');
-
                     // split name to be able to create all folders
                     $name = explode('/', $name);
                     $vendor = $name[0];
                     $project = $name[1];
+
+                    // remove all maybe existing files
+                    if (file_exists($folderForRequirements . $vendor .'/' . $project . '.ttl')) {
+                        $fileObject = new File($folderForRequirements . $vendor . '/' . $project . '.ttl');
+                        $fileObject->delete();
+                    }
 
                     if (false == file_exists($folderForRequirements . $vendor)) {
                         $fileObject = new File($folderForRequirements . $vendor);
                         $fileObject->mkdirs();
                     }
 
+                    echo PHP_EOL . '- Download '. $vendor . '/'. $project;
+
                     $curl->download(
                         $requirement['file'],
                         $folderForRequirements . $vendor . '/' . $project . '.ttl'
                     );
+
+                    echo ' - done';
                 }
             }
+
+            echo PHP_EOL;
 
         } else {
             return 'No version information found. Did you added elements to version array?';
