@@ -10,6 +10,7 @@
                 "w3c/xsd": "*"
             },
             "file": "http://www.w3.org/2007/05/powder-s.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://www.w3.org/2007/05/powder-s#"
         }
     }

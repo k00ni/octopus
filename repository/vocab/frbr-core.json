@@ -13,6 +13,7 @@
                 "w3c/skos-core": "*"
             },
             "file": "http://vocab.org/frbr/core.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://purl.org/vocab/frbr/core#"
         }
     }

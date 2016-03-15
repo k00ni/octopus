@@ -12,6 +12,7 @@
                 "xmlns/wot": "*"
             },
             "file": "http://xmlns.com/foaf/spec/20140114.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://xmlns.com/foaf/0.1/"
         }
     }

@@ -12,6 +12,7 @@
                 "xmlns/foaf": "*"
             },
             "file": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+            "file-format": "xml",
             "prefix-uri": "http://www.w3.org/2003/06/sw-vocab-status/ns#"
         }
     }

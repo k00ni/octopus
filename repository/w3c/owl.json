@@ -10,6 +10,7 @@
                 "w3c/xsd": "1.1"
             },
             "file": "https://www.w3.org/2002/07/owl#",
+            "file-format": "ttl",
             "prefix-uri": "http://www.w3.org/2002/07/owl#"
         }
     }

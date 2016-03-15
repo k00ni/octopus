@@ -8,6 +8,7 @@
                 "w3c/rdf": "*"
             },
             "file": "https://www.w3.org/2000/01/rdf-schema#",
+            "file-format": "ttl",
             "prefix-uri": "http://www.w3.org/2000/01/rdf-schema#"
         }
     }

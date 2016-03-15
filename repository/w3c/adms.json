@@ -21,6 +21,7 @@
                 "xmlns/foaf": "*",
             },
             "file": "http://www.w3.org/ns/adms.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://www.w3.org/ns/adms#"
         }
     }

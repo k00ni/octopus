@@ -8,6 +8,7 @@
                 "w3c/rdfs": "*"
             },
             "file": "https://creative-commons.org/schema.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://creative-commons.org/ns#"
         }
     }

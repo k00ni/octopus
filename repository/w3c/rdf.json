@@ -8,6 +8,7 @@
                 "w3c/rdfs": "*"
             },
             "file": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "file-format": "ttl",
             "prefix-uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         }
     }

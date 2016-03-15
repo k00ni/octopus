@@ -12,6 +12,7 @@
                 "xmlns/foaf": "*"
             },
             "file": "https://raw.githubusercontent.com/ssssam/charango/master/data/ontologies/vann.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://purl.org/vocab/vann/"
         }
     }

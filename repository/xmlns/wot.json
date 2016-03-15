@@ -10,6 +10,7 @@
                 "w3c/vs": "*"
             },
             "file": "http://xmlns.com/wot/0.1/index.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://xmlns.com/wot/0.1/"
         }
     }

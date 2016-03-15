@@ -37,6 +37,23 @@ class ConfigurationHandler
     }
 
     /**
+     * @param string $filePath Filepath or URL
+     * @return string|null
+     */
+    public function getFileExtension($filePath)
+    {
+        $ext = array_pop(explode('.', strtolower($filePath)));
+
+        switch($ext) {
+            case 'ntriples': return 'ntriples';
+            case 'ttl': return 'ttl';
+            case 'xml': return 'xml';
+            // file extension not found
+            default: return null;
+        }
+    }
+
+    /**
      * Extracts and collects information about all requirements, but does not download them.
      *
      * @param array $requirements
@@ -144,7 +161,7 @@ class ConfigurationHandler
             $curl->setOpt(CURLOPT_FOLLOWLOCATION, true);
 
             foreach ($requirements as $name => $requirement) {
-                // if a valid local file or URL was given
+                // if a valid local file was given
                 if (file_exists($requirement['file'])) {
                     $fileObject = new File($requirement['file']);
                     $fileObject->copy($targetPath);
@@ -169,12 +186,17 @@ class ConfigurationHandler
 
                     echo PHP_EOL . '- Download '. $vendor . '/'. $project;
 
-                    $curl->download(
-                        $requirement['file'],
-                        $folderForRequirements . $vendor . '/' . $project . '.ttl'
-                    );
+                    $fileExtension = $this->getFileExtension($requirement['file']);
 
-                    echo ' - done';
+                    if (null !== $fileExtension) {
+                        $curl->download(
+                            $requirement['file'],
+                            $folderForRequirements . $vendor . '/' . $project . '.' . $fileExtension
+                        );
+                        echo ' - done';
+                    } else {
+                        echo ' - unknown file extension';
+                    }
                 }
             }
 

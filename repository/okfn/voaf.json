@@ -17,6 +17,7 @@
                 "xmlns/foaf": "*"
             },
             "file": "http://lov.okfn.org/vocommons/voaf/v2.3/voaf_v2.3.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://labs.mondeca.com/vocab/voaf#"
         },
         "1.1": {
@@ -31,6 +32,7 @@
                 "w3c/vs": "*",
             },
             "file": "http://lov.okfn.org/vocommons/voaf/v1.1/voaf_v1.1.rdf",
+            "file-format": "xml",
             "prefix-uri": "http://labs.mondeca.com/vocab/voaf#"
         }
     }

@@ -11,6 +11,7 @@
                 "w3c/xsd": "*"
             },
             "file": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+            "file-format": "xml",
             "prefix-uri": "https://www.w3.org/2006/vcard/ns#"
         }
     }
