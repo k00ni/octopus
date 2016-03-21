@@ -209,8 +209,8 @@ class ConfigurationHandler
                             $fileFormatForParsing = $fileFormat;
                         }
 
-                        if (isset($this->configuration['target-file-format'])
-                            && $this->configuration['target-file-format'] != $fileFormatForParsing) {
+                        if (isset($this->configuration['target-file-serialization'])
+                            && $this->configuration['target-file-serialization'] != $fileFormatForParsing) {
 
                             // get parser suiteable for the given file format
                             $parserFactory = new ParserFactory(new NodeFactoryImpl(), new StatementFactoryImpl());
@@ -246,7 +246,7 @@ class ConfigurationHandler
                                 new StatementFactoryImpl()
                             );
 
-                            $targetFormatForSerialization = $this->configuration['target-file-format'];
+                            $targetFormatForSerialization = $this->configuration['target-file-serialization'];
                             if ('rdf-xml' == $targetFormatForSerialization) {
                                 $serializedFileFormat = 'xml';
                             } elseif ('turtle' == $targetFormatForSerialization) {

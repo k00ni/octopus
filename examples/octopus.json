@@ -1,6 +1,7 @@
 {
     "name": "myvendor/foo",
     "knowledge-directory": "knowledge-directory1",
+    "target-file-serialization": "turtle",
     "version": {
         "*": {
             "require": {
