@@ -4,7 +4,11 @@ namespace Octopus;
 
 use Curl\Curl;
 use Naucon\File\File;
+use Saft\Rdf\NodeFactoryImpl;
 use Saft\Rdf\NodeUtils;
+use Saft\Rdf\StatementFactoryImpl;
+use Saft\Skeleton\Data\ParserFactory;
+use Saft\Skeleton\Data\SerializerFactory;
 
 class ConfigurationHandler
 {
@@ -40,7 +44,7 @@ class ConfigurationHandler
      * @param string $filePath Filepath or URL
      * @return string|null
      */
-    public function getFileExtension($filePath)
+    public function getFileFormat($filePath)
     {
         $ext = array_pop(explode('.', strtolower($filePath)));
 
@@ -91,10 +95,7 @@ class ConfigurationHandler
                     }
                 }
 
-                $knownRequirements[$requirement] = array(
-                    'file' => $versionEntry['file'],
-                    'prefix-uri' => $versionEntry['prefix-uri']
-                );
+                $knownRequirements[$requirement] = $versionEntry;
 
                 /*
                  * get requirements of the current reference
@@ -186,16 +187,95 @@ class ConfigurationHandler
 
                     echo PHP_EOL . '- Download '. $vendor . '/'. $project;
 
-                    $fileExtension = $this->getFileExtension($requirement['file']);
+                    if (isset($requirement['file-format'])) {
+                        $fileFormat = $requirement['file-format'];
+                    } else {
+                        $fileFormat = $this->getFileFormat($requirement['file']);
+                    }
 
-                    if (null !== $fileExtension) {
+                    if (null !== $fileFormat) {
                         $curl->download(
                             $requirement['file'],
-                            $folderForRequirements . $vendor . '/' . $project . '.' . $fileExtension
+                            $folderForRequirements . $vendor . '/' . $project . '.' . $fileFormat
                         );
+
+                        if ('xml' == $fileFormat) {
+                            $fileFormatForParsing = 'rdf-xml';
+                        } elseif ('ttl' == $fileFormat) {
+                            $fileFormatForParsing = 'turtle';
+                        } elseif ('n3' == $fileFormat || 'nt' == $fileFormat) {
+                            $fileFormatForParsing = 'n-triples';
+                        } else {
+                            $fileFormatForParsing = $fileFormat;
+                        }
+
+                        if (isset($this->configuration['target-file-format'])
+                            && $this->configuration['target-file-format'] != $fileFormatForParsing) {
+
+                            // get parser suiteable for the given file format
+                            $parserFactory = new ParserFactory(new NodeFactoryImpl(), new StatementFactoryImpl());
+                            $parser = $parserFactory->createParserFor($fileFormatForParsing);
+
+                            if (null == $parser) {
+                                echo ' - Unknown file format given: '. $fileFormatForParsing
+                                    . '; Leaving file at : '. $fileFormat;
+                                continue;
+                            }
+
+                            // parse file content and transform it into a statement
+                            $statementIterator = $parser->parseStreamToIterator(
+                                $folderForRequirements . $vendor . '/' . $project . '.' . $fileFormat
+                            );
+
+                            /* go through iterator and output the first few statements
+                            $i = 0;
+                            foreach ($statementIterator as $statement) {
+                                echo (string)$statement->getSubject()
+                                    . ' ' . (string)$statement->getPredicate()
+                                    . ' ' . (string)$statement->getObject()
+                                    . PHP_EOL;
+
+                                if ($i++ == 10) { break; }
+                            }
+
+                            continue;*/
+
+                            // get serializer for target file format
+                            $serializerFactory = new SerializerFactory(
+                                new NodeFactoryImpl(),
+                                new StatementFactoryImpl()
+                            );
+
+                            $targetFormatForSerialization = $this->configuration['target-file-format'];
+                            if ('rdf-xml' == $targetFormatForSerialization) {
+                                $serializedFileFormat = 'xml';
+                            } elseif ('turtle' == $targetFormatForSerialization) {
+                                $serializedFileFormat = 'ttl';
+                            } elseif ('n-triples' == $targetFormatForSerialization) {
+                                $serializedFileFormat = 'n3';
+                            } else {
+                                $serializedFileFormat = $targetFormatForSerialization;
+                            }
+
+                            $targetFile = 'file://'
+                                . $folderForRequirements
+                                . $vendor
+                                . '/'
+                                . $project
+                                . '.'
+                                . $serializedFileFormat;
+
+                            $serializer = $serializerFactory->createSerializerFor($targetFormatForSerialization);
+                            $serializer->serializeIteratorToStream($statementIterator, fopen($targetFile, 'w'));
+
+                            if (file_exists($targetFile)) {
+                                unlink($folderForRequirements . $vendor . '/' . $project . '.' . $fileFormat);
+                            }
+                        }
+
                         echo ' - done';
                     } else {
-                        echo ' - unknown file extension';
+                        echo ' - unknown file format for the ontology reference: '. $requirement['file'];
                     }
                 }
             }
