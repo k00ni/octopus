@@ -10,7 +10,7 @@
                 "w3c/rdfs": "*",
                 "w3c/skos-core": "*"
             },
-            "file": "https://raw.githubusercontent.com/dublin-core/website/master/build/dcam.ttl",
+            "file": "https://raw.githubusercontent.com/dublincore/website/master/build/dcam.ttl",
             "prefix-uri": "http://purl.org/dc/dcam/"
         }
     }

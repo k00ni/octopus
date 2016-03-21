@@ -11,7 +11,7 @@
                 "w3c/rdfs": "*",
                 "w3c/skos-core": "*"
             },
-            "file": "https://raw.githubusercontent.com/dublin-core/website/master/build/dcelements.ttl",
+            "file": "https://raw.githubusercontent.com/dublincore/website/master/build/dcelements.ttl",
             "prefix-uri": "http://purl.org/dc/elements/1.1/"
         }
     }
