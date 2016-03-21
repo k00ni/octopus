@@ -1,10 +1,11 @@
 {
     "name": "k00ni/octopus",
     "require": {
-        "naucon/file": "*",
-        "php-curl-class/php-curl-class": "*",
+        "naucon/file": "1.*",
+        "php-curl-class/php-curl-class": "4.*",
         "symfony/console": "*",
-        "saft/saft": "*"
+        "saft/saft": "dev-master",
+        "saft/saft-skeleton": "0.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
